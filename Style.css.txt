@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  font-family: 'Rajdhani', sans-serif;
+  background: black;
+  color: #D2B48C; /* coffee palette */
+  text-align: center;
+}
+
+header {
+  background: #341C02; /* dark brown */
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #D2B48C; /* coffee shade */
+  font-weight: bold;
+}
+
+p {
+  color: #D2B48C; /* tagline color */
+}
+
+section {
+  margin: 20px auto;
+  padding: 15px;
+  max-width: 500px;
+  background: #341C02; /* dark brown */
+  border-radius: 8px;
+}
+
+input[type="number"], input[type="text"], select {
+  background-color: #341C02; /* dark brown inputs */
+  border: 1px solid #D2B48C;
+  padding: 8px;
+  color: #D2B48C;
+  border-radius: 5px;
+  width: 60%;
+  margin: 5px 0;
+}
+
+button {
+  margin-top: 10px;
+  background: #D2B48C;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: black;
+  transition: background 0.3s; /* Smooth hover effect */
+}
+
+button:hover {
+  background: #8B5A2B;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 5px 0;
+  color: #D2B48C;
+}
+
+li.oweMe {
+  color: #00FF00; /* green for Owe Me */
+}
+
+li.iOwe {
+  color: #FF3333; /* red for I Owe */
+}
+
+.summary p {
+  margin: 8px 0;
+}

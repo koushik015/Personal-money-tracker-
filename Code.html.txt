@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bill Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>BILL TRACKER</h1>
+    <p>Every bill requires attention.</p>
+  </header>
+
+  <main>
+    <!-- Pocket Money Input -->
+    <section>
+      <h2>Pocket Allowance</h2>
+      <input type="number" id="allowance" placeholder="Enter allowance">
+      <button onclick="setAllowance()">Save</button>
+    </section>
+
+    <!-- Spending Categories -->
+    <section>
+      <h2>Expenses</h2>
+      <label>Category:</label>
+      <select id="category">
+        <option>Food</option>
+        <option>Travel</option>
+        <option>Fun</option>
+        <option>Sports</option>
+        <option>Stationery</option>
+        <option>Misc</option>
+      </select>
+      <input type="number" id="amount" placeholder="Enter amount">
+      <button onclick="addExpense()">Add Expense</button>
+
+      <ul id="expense-list"></ul>
+    </section>
+
+    <!-- Owe Me Section -->
+    <section>
+      <h2>Owe Me</h2>
+      <input type="text" id="oweMeName" placeholder="Enter name">
+      <input type="number" id="oweMeAmount" placeholder="Enter amount">
+      <button onclick="addOweMe()">Add</button>
+      <ul id="oweMeList"></ul>
+    </section>
+
+    <!-- I Owe Section -->
+    <section>
+      <h2>I Owe</h2>
+      <input type="text" id="iOweName" placeholder="Enter name">
+      <input type="number" id="iOweAmount" placeholder="Enter amount">
+      <button onclick="addIOwe()">Add</button>
+      <ul id="iOweList"></ul>
+    </section>
+
+    <!-- Summary -->
+    <section class="summary">
+      <h2>Summary Dashboard</h2>
+      <p>Total Allowance: ₹<span id="showAllowance">0</span></p>
+      <p>Total Spent: ₹<span id="totalSpent">0</span></p>
+      <p>Total Savings: ₹<span id="totalSavings">0</span></p>
+      <p>Total Owe Me: ₹<span id="totalOweMe">0</span></p>
+      <p>Total I Owe: ₹<span id="totalIOwe">0</span></p>
+    </section>
+
+    <!-- Chart -->
+    <section>
+      <h2>Expense Chart</h2>
+      <canvas id="expenseChart"></canvas>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
